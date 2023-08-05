@@ -19,9 +19,15 @@ export const ContactList = ({ filteredContacts, deleteContact }) => {
 ContactList.propTypes = {
     filteredContacts: PropTypes.arrayOf(
         PropTypes.exact({
-            id: PropTypes.string.isRequired,
             name: PropTypes.string.isRequired,
             number: PropTypes.string.isRequired,
+        }).isRequired
+    )
+}
+ContactList.propTypes = {
+    deleteContact: PropTypes.arrayOf(
+        PropTypes.exact({
+            id: PropTypes.string.isRequired,
         }).isRequired
     )
 }
